@@ -22,7 +22,7 @@ class DeepQNetwork(nn.Module):
         self.fc1 = nn.Linear(input_dims,fc1_dims)
         
         # linear input connection from the hidden layer to output
-        self.fc2 = nn.Linear(fc1_dims,n_actions)
+        self.fc3 = nn.Linear(fc1_dims,n_actions)
         
         # Allows you to select optimizer with a string in the main method
         if optimizer == 'RMSprop':
@@ -39,7 +39,7 @@ class DeepQNetwork(nn.Module):
     def forward(self, state):
         observation = T.Tensor(state).to(self.device)
         x = F.relu(self.fc1(observation))
-        actions = self.fc2(x)
+        actions = self.fc3(x)
 
         return actions
 

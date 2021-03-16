@@ -10,11 +10,10 @@ class ConvOptim():
 
     def run_optimizer(self, store_dir, benchmark, supervised_training_set, game_collection, supervised_test_set, development):
         
-        obs = ''
         # Initialize charging environment with given EV data
         env = gym.make('ChargingEnv-v0', game_collection=game_collection,
                         battery_capacity=24, charging_rate=6,
-                        penalty_coefficient=12, obs)
+                        penalty_coefficient=12, obs='benchmark')
     
         # Sample each day 10 times for benchmark and test set
         if benchmark:

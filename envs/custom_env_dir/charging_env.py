@@ -187,6 +187,7 @@ class ChargingEnv(gym.Env):
         elif self.day_cat == 1:
             self.is_we = 0
         
+        
         # Sample different arrival time and soc depending on this day's category
         if self.day_cat > 1:
             self.start_time, self.start_ind = self.arr_pattern_h_we()
@@ -218,6 +219,8 @@ class ChargingEnv(gym.Env):
             observation = [self.hourly_prices['t_sin'][self.t_step+168]] + [self.hourly_prices['t_cos'][self.t_step+168]] + [self.is_we]
         elif self.obs == 'obs2(t_step,daycat)':
             observation = [self.t_step] + [self.hourly_prices['day_cat'][self.t_step+168]]
+        elif self.obs == 'benchmark':
+            observation = []
         else:
             observation = []
             print('INPUT FEATURE COMBINATION NOT SPECIFIED IN THE ENVIRONMENT!')
