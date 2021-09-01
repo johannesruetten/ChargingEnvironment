@@ -1,5 +1,5 @@
 # ChargingEnvironment
-ChargingEnvironment is a Python library for training a deep reinforcement learning agent to maximize its profit in a decentralized electric vehicle smart charging process. The program architecture was developed as part of a master's thesis at the Technical University of Berlin. 
+ChargingEnvironment is a Python library for training a deep reinforcement learning agent to maximize its profit in a decentralized electric vehicle smart charging process. The program architecture was developed as part of a master's thesis at the Technical University of Berlin. The thesis can be accessed via this [link](https://drive.google.com/file/d/1moHUyBX9g4XOxdQ9dlC9kJN_c8IlZ0j9/view?usp=sharing).
 
 ## Installation
 Download the repository, navigate into the folder 'ChargingEnvironment' and use the package manager [pip](https://pip.pypa.io/en/stable/) to install the charging environment.
